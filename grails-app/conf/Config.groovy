@@ -96,6 +96,16 @@ environments {
 }
 
 // log4j configuration
+// 将日志输出到固定的目录下，并且以程序名作为文件名
+log4j = {
+    appenders {
+        file name:'file', file:"/var/logs/${grails.util.Metadata.current.'app.name'}.log" 
+    }
+    root {
+        error 'file'
+    }
+}
+
 log4j.main = {
     // Example of changing the log pattern for the default console appender:
     //
