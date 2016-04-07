@@ -1,6 +1,7 @@
 package cn.edu.cup.system
 
 import grails.transaction.Transactional
+import static groovy.io.FileType.*
 
 @Transactional
 class InitService {
@@ -13,7 +14,8 @@ class InitService {
         println "load scripts ${dir}"
         if (sf.exists()) {
             if (sf) {
-                sf.eachFile {f->
+                //sf.eachFile {f->
+                sf.eachFileMatch('*.sql') {f->
                     if (f.isFile()) {
                         executeScript(f)
                     }
