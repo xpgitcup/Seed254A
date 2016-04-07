@@ -14,10 +14,14 @@ class InitService {
         println "load scripts ${dir}"
         if (sf.exists()) {
             if (sf) {
-                //sf.eachFile {f->
-                sf.eachFileMatch('*.sql') {f->
+                sf.eachFile {f->
+                    //sf.eachFileMatch(FILES, ~/.*\.bak/) {f->
                     if (f.isFile()) {
-                        executeScript(f)
+                        def name = f.name
+                        //println name
+                        if (!name.endsWith('.bak')) {
+                            executeScript(f)
+                        }
                     }
                 }
             }
