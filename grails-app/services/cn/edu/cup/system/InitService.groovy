@@ -19,7 +19,8 @@ class InitService {
                     if (f.isFile()) {
                         def name = f.name
                         //println name
-                        if (!name.endsWith('.bak')) {
+                        //只有sql类型的文件才执行...
+                        if (name.endsWith('.sql')) {
                             executeScript(f)
                         }
                     }
