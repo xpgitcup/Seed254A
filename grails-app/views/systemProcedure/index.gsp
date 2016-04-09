@@ -58,7 +58,7 @@
 				</g:each>
 				</tbody>
 			</table>
-			<div class="pagination">
+			<div class="paginationGrails">
 				<g:paginate total="${systemProcedureInstanceCount ?: 0}" />
 			</div>
 		</div>
