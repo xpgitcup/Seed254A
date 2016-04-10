@@ -44,5 +44,6 @@ INSERT INTO `system_menu` VALUES ('6', '0', 'systemMenuTree/index', '树形菜�
 INSERT INTO `system_menu` VALUES ('7', '0', 'systemProcedure/index', '过程控制', '过程控制维护', '0', '10', '1');
 
 INSERT INTO `system_menu` VALUES ('100', '0', '#', '测试测试', '#', '0', '0', null);
-INSERT INTO `system_menu` VALUES ('101', '0', 'testClazzA/index', '测试', '测试', '0', '10', '100');
-INSERT INTO `system_menu` VALUES ('102', '0', 'testClazzB/index', '测试', '测试', '0', '10', '100');
+INSERT INTO `system_menu` VALUES ('101', '0', 'testClazzA/index', '测试A', '测试', '0', '10', '100');
+INSERT INTO `system_menu` VALUES ('102', '0', 'testClazzB/index', '测试B', '测试', '0', '10', '100');
+INSERT INTO `system_menu` VALUES ('103', '0', 'test/index', '测试计算', '测试', '0', '10', '100');
